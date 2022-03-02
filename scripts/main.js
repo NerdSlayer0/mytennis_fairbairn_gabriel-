@@ -35,3 +35,36 @@ function insertName() {
     });
 }
 insertName();
+
+function writeHikes() {
+    //define a variable for the collection you want to create in Firestore to populate data
+    var hikesRef = db.collection("hikes");
+
+    hikesRef.add({
+        code:"BBY01",
+        name: "Killarney",    //replace with your own city?
+        city: "Burnaby",
+        province: "BC",
+        level: "easy",
+        length: "10 km",
+        details: "Geb goes here regularly"
+    });
+    hikesRef.add({
+        code:"AM01",
+        name: "Burnaby Tennis Club",    //replace with your own city?
+        city: "Anmore",
+        province: "BC",
+        level: "moderate",
+        length: "10.5 km",
+        details: "Geb goes here regularly"
+    });
+    hikesRef.add({
+        code:"NV01",
+        name: "Grouse Mountain",    //replace with your own city?
+        city: "North Vancouver",
+        province: "BC",
+        level: "hard",
+        length: "8.2 km",
+        details: "Geb goes here regularly"
+    });
+}
